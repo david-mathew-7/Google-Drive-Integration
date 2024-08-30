@@ -25,7 +25,7 @@ To run this application locally, you'll need:
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/david-mathew-7/Google-Drive-Integration.git
    cd Google-drive-integration
    uvicorn app.main:app --reload
    
