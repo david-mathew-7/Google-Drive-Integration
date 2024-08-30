@@ -18,7 +18,7 @@ To run this application locally, you'll need:
 - Python 3.10 or higher
 - `pip` (Python package installer)
 - A Google Cloud Platform project with OAuth 2.0 credentials
-- pip install -r requirements.txt
+- pip install -r requirements.txt 
 
 
 ## Setup Instructions
@@ -26,9 +26,16 @@ To run this application locally, you'll need:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/david-mathew-7/Google-Drive-Integration.git
+
+
+
+2. **How to Run**
+   ```
    cd Google-drive-integration
    uvicorn app.main:app --reload
-   
+
+   Note: You must need to add CLIENT_SECRETS_FILE to run the Oauth2 in auth.py.
+         You have to create this by using GoogleCloudPlatform.
+
    To Run: UnitTestCases
    pytest app/tests/test_main.py
-
