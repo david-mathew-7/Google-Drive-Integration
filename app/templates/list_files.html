@@ -1,0 +1,33 @@
+<!-- templates/list_files.html -->
+{% extends "base.html" %}
+
+{% block title %}
+    List Files - Google Drive Integration
+{% endblock %}
+
+{% block content %}
+    <h2>Files in Google Drive</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in items %}
+            <tr>
+                <td>{{ file.name }}</td>
+                <td>{{ file.mimeType }}</td>
+                <td>
+                    <a href="/drive/download-file/{{ file.id }}" class="btn">Download</a>
+                    <form action="/drive/delete-file/{{ file.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Google Drive Integration{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Google Drive Integration</h1>
+        <nav>
+            <a href="/drive/list-files">List File</a> |
+            <a href="/drive/upload-file">Upload File</a> |
+            <a href="/auth/logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
